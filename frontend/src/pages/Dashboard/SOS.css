@@ -1,0 +1,117 @@
+/* ── SOS Button ── */
+.sos-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sos-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+.sos-btn {
+  position: relative;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ef4444, #e11d48);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 20px 60px rgba(239,68,68,0.5);
+  user-select: none;
+  transition: transform 0.15s ease;
+}
+.sos-btn:hover { transform: scale(1.05); }
+.sos-btn:active { transform: scale(0.92); }
+.sos-btn .sos-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(252,165,165,0.3);
+  animation: sos-pulse 2.2s ease-in-out infinite;
+}
+.sos-btn .sos-text {
+  color: white;
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 1;
+}
+.sos-hint {
+  font-size: 0.7rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* ── SOS Overlay ── */
+.sos-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(220,38,38,0.93);
+  backdrop-filter: blur(8px);
+  animation: fade-in-backdrop 0.2s ease;
+}
+.sos-countdown {
+  font-size: 6rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 1.5rem;
+  animation: sos-number-pulse 0.8s ease-in-out infinite;
+}
+.sos-cancel-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 1rem;
+  background: white;
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.sos-cancel-btn:hover { transform: scale(1.05); }
+.sos-sent-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  animation: fade-in 0.4s ease;
+}
+
+/* ── Floating SOS ── */
+.floating-sos {
+  position: fixed;
+  bottom: 6rem;
+  right: 1rem;
+  z-index: 30;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ef4444, #e11d48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(239,68,68,0.5);
+  transition: transform 0.15s ease;
+}
+.floating-sos:hover { transform: scale(1.1); }
+.floating-sos:active { transform: scale(0.9); }
+.floating-sos-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(252,165,165,0.4);
+  animation: sos-pulse 2s ease-in-out infinite;
+}

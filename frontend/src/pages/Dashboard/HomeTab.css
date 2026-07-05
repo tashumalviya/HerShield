@@ -1,0 +1,82 @@
+/* ── Status Bar ── */
+.status-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: status-pulse 2s ease-in-out infinite;
+}
+
+/* ── Stats Grid ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.stat-card {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.stat-icon { font-size: 1.25rem; margin-bottom: 0.25rem; }
+.stat-label { font-size: 0.7rem; }
+.stat-value { font-weight: 700; font-size: 0.85rem; }
+
+/* ── Police Stations ── */
+.station-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.call-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+.call-btn:hover { transform: scale(1.1); }
+.call-btn:active { transform: scale(0.9); }
+
+/* ── AI Quick Card ── */
+.ai-quick-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.15s ease;
+}
+.ai-quick-card:hover { transform: scale(1.02); }
+.ai-quick-card:active { transform: scale(0.97); }
+.ai-icon-box {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.875rem;
+  background: linear-gradient(135deg, #8b5cf6, #9333ea);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ai-chat-badge {
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #8b5cf6, #9333ea);
+  color: white;
+  white-space: nowrap;
+}
