@@ -34,7 +34,7 @@ export default function Login() {
 
       // 1. Check User
       const check = await axios.post(
-        "https://https://hershield-f3bj.onrender.com/api/auth/check-user",
+        "https://hershield-f3bj.onrender.com/api/auth/check-user",
         {
           email: loginEmail
         }
@@ -44,7 +44,7 @@ export default function Login() {
 
       // 2. Send OTP
       await axios.post(
-        "https://https://hershield-f3bj.onrender.com/api/auth/send-otp",
+        "https://hershield-f3bj.onrender.com/api/auth/send-otp",
         {
           email: loginEmail
         }

@@ -42,7 +42,7 @@ const handleNext = async () => {
   try {
 
     await axios.post(
-      "https://https://hershield-f3bj.onrender.com/api/auth/complete-onboarding",
+      "https://hershield-f3bj.onrender.com/api/auth/complete-onboarding",
       {
         userId: user.id
       }

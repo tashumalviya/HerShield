@@ -14,7 +14,7 @@ export default function ContactsTab({ dark, contacts, setContacts }) {
     const user = JSON.parse(localStorage.getItem("user"));
     if (!user) return;
     try {
-      const res = await axios.get(`https://https://hershield-f3bj.onrender.com/api/contacts/${user.id}`);
+      const res = await axios.get(`https://hershield-f3bj.onrender.com/api/contacts/${user.id}`);
       const formatted = res.data.map(c => ({
         id: c.id,
         name: c.contact_name,
@@ -38,7 +38,7 @@ export default function ContactsTab({ dark, contacts, setContacts }) {
     if (!newContact.name || !newContact.phone || !newContact.email)
       return alert("Please fill all fields");
     try {
-      await axios.post("https://https://hershield-f3bj.onrender.com/api/contacts", {
+      await axios.post("https://hershield-f3bj.onrender.com/api/contacts", {
         user_id: user.id,
         contact_name: newContact.name,
         contact_phone: newContact.phone,

@@ -80,7 +80,7 @@ export default function OtpVerify() {
       setStatus("loading");
 
       const response = await axios.post(
-        "https://https://hershield-f3bj.onrender.com/api/auth/verify-otp",
+        "https://hershield-f3bj.onrender.com/api/auth/verify-otp",
         {
           email: user?.email || loginEmail,
           otp: code
@@ -94,7 +94,7 @@ export default function OtpVerify() {
   setStatus("success");
 
   const res = await axios.post(
-    "https://https://hershield-f3bj.onrender.com/api/auth/check-user",
+    "https://hershield-f3bj.onrender.com/api/auth/check-user",
     {
       email: user?.email || loginEmail,
     }
@@ -133,7 +133,7 @@ export default function OtpVerify() {
     try {
 
       await axios.post(
-        "https://https://hershield-f3bj.onrender.com/api/auth/send-otp",
+        "https://hershield-f3bj.onrender.com/api/auth/send-otp",
         {
           email: user?.email || loginEmail
         }
