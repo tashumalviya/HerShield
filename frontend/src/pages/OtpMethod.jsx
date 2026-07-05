@@ -20,7 +20,7 @@ export default function OtpMethod() {
     try {
 
       const response = await axios.post(
-        "http://localhost:5000/api/auth/send-otp",
+        "https://hershield-r3b1.onrender.com/api/auth/send-otp",
         {
           email: user?.email || loginEmail
         }
