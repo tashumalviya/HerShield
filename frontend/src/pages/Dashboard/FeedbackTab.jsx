@@ -15,7 +15,7 @@ export default function FeedbackTab({ dark }) {
 
   const fetchFeedbacks = async () => {
     try {
-      const res = await axios.get("https://hershield-r3b1.onrender.com/api/feedback");
+      const res = await axios.get("https://https://hershield-f3bj.onrender.com/api/feedback");
       const formatted = res.data.map(f => ({
         id: f.id,
         area: f.area_name,
@@ -37,7 +37,7 @@ export default function FeedbackTab({ dark }) {
     const user = JSON.parse(localStorage.getItem("user"));
     if (!feedbackForm.area) return;
     try {
-      await axios.post("https://hershield-r3b1.onrender.com/api/feedback", {
+      await axios.post("https://https://hershield-f3bj.onrender.com/api/feedback", {
         user_id: user.id,
         area_name: feedbackForm.area,
         tag: feedbackForm.tag,

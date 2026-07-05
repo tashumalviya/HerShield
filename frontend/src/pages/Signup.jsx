@@ -43,7 +43,7 @@ const handleLogin = async () => {
 
     // Check user
     const userRes = await axios.post(
-      "https://hershield-r3b1.onrender.com/api/auth/check-user",
+      "https://https://hershield-f3bj.onrender.com/api/auth/check-user",
       {
         email: loginEmail,
       }
@@ -53,7 +53,7 @@ const handleLogin = async () => {
 
     // Send OTP
     await axios.post(
-      "https://hershield-r3b1.onrender.com/api/auth/send-otp",
+      "https://https://hershield-f3bj.onrender.com/api/auth/send-otp",
       {
         email: loginEmail,
       }
@@ -116,7 +116,7 @@ if (mode === "signin") {
   });
 
     const response = await axios.post(
-      "https://hershield-r3b1.onrender.com/api/auth/register",
+      "https://https://hershield-f3bj.onrender.com/api/auth/register",
       {
         name,
         email,

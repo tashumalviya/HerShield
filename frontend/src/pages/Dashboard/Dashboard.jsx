@@ -60,7 +60,7 @@ const handleDelete = async () => {
   try {
 
     const res = await axios.delete(
-      `https://hershield-r3b1.onrender.com/api/auth/delete/${user.id}`
+      `https://https://hershield-f3bj.onrender.com/api/auth/delete/${user.id}`
     );
 
     alert(res.data.message);
@@ -93,13 +93,13 @@ const handleDelete = async () => {
         console.log("SOS Location:", locationLink);
 
         try {
-          await fetch("https://hershield-r3b1.onrender.com/api/tracking/start", {
+          await fetch("https://https://hershield-f3bj.onrender.com/api/tracking/start", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ user_id: user.id, latitude: lat, longitude: lng }),
           });
 
-          const response = await fetch("https://hershield-r3b1.onrender.com/api/sos", {
+          const response = await fetch("https://https://hershield-f3bj.onrender.com/api/sos", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ user_id: user.id, latitude: lat, longitude: lng }),
@@ -111,7 +111,7 @@ const handleDelete = async () => {
           window.liveTracking = setInterval(() => {
             navigator.geolocation.getCurrentPosition(
               async (pos) => {
-                await fetch("https://hershield-r3b1.onrender.com/api/tracking/update", {
+                await fetch("https://https://hershield-f3bj.onrender.com/api/tracking/update", {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },
                   body: JSON.stringify({
