@@ -1,0 +1,96 @@
+/* ── Sliding Sidebar ── */
+.side-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(3px);
+  animation: fade-in-backdrop 0.2s ease;
+}
+
+.side-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 17rem;
+  z-index: 46;
+  background: linear-gradient(160deg, #1a0d30 0%, #0f0a1e 100%);
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 40px rgba(0,0,0,0.4);
+}
+.side-drawer.open { transform: translateX(0); }
+
+.side-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.side-avatar {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b5cf6, #9333ea);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.side-id { flex: 1; }
+.side-name { font-weight: 600; font-size: 0.9rem; }
+.side-phone { font-size: 0.75rem; color: #94a3b8; }
+.side-close {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-nav {
+  flex: 1;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-y: auto;
+}
+.side-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.875rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: #cbd5e1;
+  font-size: 0.875rem;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+.side-item:hover { background: rgba(255,255,255,0.08); color: white; }
+.side-item.active {
+  background: linear-gradient(135deg, #8b5cf6, #9333ea);
+  color: white;
+}
+.side-item.danger { color: #fca5a5; }
+.side-item.danger:hover { background: rgba(239,68,68,0.15); color: #fca5a5; }
+
+.side-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 0.5rem 0;
+}

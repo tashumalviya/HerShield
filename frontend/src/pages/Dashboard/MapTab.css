@@ -1,0 +1,63 @@
+/* ── Map ── */
+.map-container {
+  position: relative;
+  height: 15rem;
+  width: 100%;
+}
+.map-location-pin {
+  position: absolute;
+  left: 48%;
+  top: 42%;
+  animation: float 2s ease-in-out infinite;
+}
+.location-dot {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 2px solid white;
+  box-shadow: 0 4px 12px rgba(59,130,246,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map-legends {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.map-legend-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.route-options {
+  display: flex;
+  gap: 0.5rem;
+}
+.route-option {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  text-align: left;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+.station-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  background: #6366f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
