@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { Plus, Phone, Trash2 } from "lucide-react";
 import { useApi } from "../../api";
-import "./ContactsTab.css";
+import "./ContactsTab.css"; 
 
 export default function ContactsTab({ dark, contacts, setContacts }) {
   const api = useApi();
